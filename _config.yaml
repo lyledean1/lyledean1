@@ -1,4 +1,4 @@
-theme: jekyll-theme-minima
+theme: minima
 plugins:
 - jekyll-remote-theme
 - jekyll-feed
