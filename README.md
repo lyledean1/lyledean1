@@ -7,7 +7,7 @@
 <h3>Blogs</h3>
 <ul class="blog-list">
   <li>
-    <a href="/blog/cylang.md">Cyclang - Building a Compiler with Rust and LLVM</a>
+    <a href="/blog/cyclang.md">Cyclang - Building a Compiler with Rust and LLVM</a>
   </li>
   <li>
     <a href="/blog/zig.md">Learning Zig by Building zigxd</a>
