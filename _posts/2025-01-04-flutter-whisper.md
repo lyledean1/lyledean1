@@ -12,4 +12,4 @@ date: 2024-01-04
 ## Video
 The example below took < 1 second to process the audio on an iPhone 12
 
-https://user-images.githubusercontent.com/20296911/229925629-9f4e9fa0-6165-4d96-b61b-a04f8105a1f6.MOV
+![Video](https://user-images.githubusercontent.com/20296911/229925629-9f4e9fa0-6165-4d96-b61b-a04f8105a1f6.MOV)
