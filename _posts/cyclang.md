@@ -1,3 +1,7 @@
+---
+layout: post
+title:  "Building a Compiler with Rust and LLVM"
+---
 # Cyclang - Building a Compiler with Rust and LLVM
 
 Ever wondered what it takes to build your own programming language? In this post, I'll take you through my journey of creating Cyclang, a toy programming language that compiles to LLVM IR using Rust. While the language itself is straightforward, the real adventure lay in learning both Rust and LLVM simultaneously - an ambitious undertaking that proved both challenging and rewarding.
