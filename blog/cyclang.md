@@ -1,0 +1,162 @@
+# Cyclang - Building a Compiler with Rust and LLVM
+
+Ever wondered what it takes to build your own programming language? In this post, I'll take you through my journey of creating Cyclang, a toy programming language that compiles to LLVM IR using Rust. While the language itself is straightforward, the real adventure lay in learning both Rust and LLVM simultaneously - an ambitious undertaking that proved both challenging and rewarding.
+
+## What is Cyclang?
+
+*The language features are intentionally minimal, you can find the full specification in the [book](https://lyledean1.github.io/cyclang/), the focus of this project was on the journey of building a compiler from scratch in Rust using LLVM.*
+
+Cyclang is a simple, statically-typed programming language that supports basic constructs like functions, control flow, and arithmetic operations. Cyclang also offers just-in-time compilation which does on-the-fly translation of code to native machine instructions using LLVM's JIT engine, allowing for optimized runtime performance while maintaining the flexibility of dynamic compilation. 
+
+Here's a taste of what Cyclang code looks like:
+
+```rust
+fn fib(i32 n) -> i32 {
+    if (n < 2) {
+        return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+print(fib(20));
+```
+
+## Why Rust? 
+
+There are a lot of reasons to use Rust - this article from Github explains it well "[Why Rust is the most admired language among developers](https://github.blog/developer-skills/programming-languages-and-frameworks/why-rust-is-the-most-admired-language-among-developers/)".
+
+One of the main benefits for building a compiler is pattern matching. Rust's exhaustive pattern matching ensures that all possible cases are handled at compile time, preventing runtime errors. Here's a simple example:
+```rust
+enum Token {
+    Number(i64),
+    Plus,
+    Minus,
+    LeftParen,
+    RightParen,
+}
+
+fn evaluate_token(token: Token) -> String {
+    match token {
+        Token::Number(n) => format!("Found number: {}", n),
+        Token::Plus | Token::Minus => "Found operator",
+        Token::LeftParen => "Found opening parenthesis",
+        Token::RightParen => "Found closing parenthesis",
+        // The compiler ensures all cases are handled
+    }
+}
+```
+
+Rust's type system and ownership model make it ideal for building robust parsers and compilers. The combination of zero-cost abstractions, memory safety guarantees, and rich algebraic data types allows you to express complex language constructs clearly and efficiently.
+
+For example, you can easily extend the token parser into a full expression evaluator:
+```rust
+enum Expr {
+    Binary(Box<Expr>, Token, Box<Expr>),
+    Literal(i64),
+    Group(Box<Expr>)
+}
+
+fn evaluate(expr: &Expr) -> Result<i64, String> {
+    match expr {
+        Expr::Literal(n) => Ok(*n),
+        Expr::Binary(left, Token::Plus, right) => 
+            Ok(evaluate(left)? + evaluate(right)?),
+        Expr::Group(expr) => evaluate(expr),
+        _ => Err("Invalid expression".into())
+    }
+}
+```
+
+## Architecture: From Source to Machine Code
+
+Let's dive into how Cyclang turns code into executable instructions:
+
+```mermaid
+flowchart LR;
+    CyclangLanguage-->PestParser;
+    PestParser--> AST;
+    AST-->|llvm-sys| LLVM-IR;
+    LLVM-IR-->|LLVM-JIT-Engine| Output;
+```
+
+### 1. Parsing with Pest
+
+The first step in any compiler is parsing source code into a structured format. For Cyclang, I chose the [pest parser](https://pest.rs/), a modern parsing framework for Rust. While I had previously worked with LALRPOP, Pest offered a more intuitive approach to grammar definition.
+
+The parsing process involves two main components:
+- A grammar file ([cyclo.pest](https://github.com/lyledean1/cyclang/blob/main/grammar/cyclo.pest)) that defines the language syntax
+- A parser implementation that transforms the syntax into an Abstract Syntax Tree (AST)
+
+One interesting learning: as the language grew more complex, maintaining the grammar file became increasingly challenging. In retrospect, hand-writing a parser might have offered more flexibility, though Pest's declarative approach was perfect for rapid prototyping.
+
+### 2. LLVM Integration
+
+The most fascinating (and challenging) aspect of building Cyclang was its integration with LLVM. I chose to use [llvm-sys](https://gitlab.com/taricorp/llvm-sys.rs), which provides raw Rust bindings to LLVM's C API.
+
+#### Why LLVM?
+
+LLVM (Low Level Virtual Machine) is a compiler infrastructure that offers:
+- A powerful intermediate representation (IR) that abstracts away machine-specific details
+- Sophisticated optimization passes
+- Multiple target architecture support
+- Just-In-Time compilation capabilities
+
+#### LLVM APIs
+
+Working directly with LLVM's C API through llvm-sys had its pros & cons:
+
+**Pros:**
+- Gained a deep understanding of LLVM's architecture
+- Fine-grained control over IR generation
+- Direct access to LLVM's full feature set
+
+**Cons:**
+- Steep learning curve
+- Verbose code for even simple operations
+- Manual memory management considerations
+
+To manage complexity, I organized the LLVM interaction code into a dedicated [codegen module](https://github.com/lyledean1/cyclang/tree/main/crates/cyclang-backend/src/compiler/codegen).
+
+### Implementation Highlights
+
+#### Control Flow Translation
+
+One fascinating aspect of the implementation is how high-level control structures are translated to LLVM IR. For example, Cyclang's for loops are actually desugared into while loops at the IR level:
+
+```rust
+// Cyclang for loop
+for (i32 i = 0; i < 10; i = i + 1) {
+    print(i);
+}
+
+// Gets translated to equivalent of:
+{
+    i32 i = 0;
+    while (i < 10) {
+        print(i);
+        i = i + 1;
+    }
+}
+```
+
+You can see the full implementation in the [builder.rs](https://github.com/lyledean1/cyclang/blob/c38aaa96c0b527ab18b87816cc9c7338fc3dbf2b/crates/cyclang-backend/src/compiler/codegen/builder.rs#L549) file.
+
+#### Working with Complex Types
+
+One of the most challenging aspects was implementing complex types like strings. LLVM operates at a very low level, where even basic string operations require careful memory management and pointer manipulation. See the required LLVM IR [here!](https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/appendix-a-how-to-implement-a-string-type-in-llvm/)
+
+Rather than generating all the LLVM IR manually, I found a hybrid approach more practical: generating LLVM bitcode from C files for complex operations, then loading and linking this with the rest of the IR. This approach significantly simplified the implementation of the standard library.
+
+## Learnings 
+
+### Parser Implementation
+While Pest proved to be a capable parsing library, I plan to implement a handwritten parser in my next project. This will deepen my understanding of parsing techniques, particularly precedence parsing with recursive descent, and give me more fine-grained control over the parsing process.
+
+### Test Automation
+Although Cyclang maintained comprehensive test coverage, I recognize now that file-based test generation would have been more efficient than manually writing individual test cases in Rust. This approach would have made the test suite more maintainable and easier to expand.
+
+### LLVM Integration
+The direct integration with LLVM's API led to increased complexity in the codegen module. For future projects, I plan to either abstract this into a separate library or leverage existing solutions like Inkwell to improve code organization and maintainability.
+
+## Conclusion
+
+Cyclang started as a toy project to learn Rust and LLVM, evolving into a journey through the fascinating world of compiler design. While small in scope, building it from scratch taught me invaluable lessons about language design, low-level programming, and the elegant complexity of modern compilers. I hope sharing this experience offers useful insights for anyone interested in similar explorations.
