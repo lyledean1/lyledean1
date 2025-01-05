@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learning Zig by Building zigxd"
-date: 2024-01-01
+date: 2025-01-01
 ---
 
 I built [zigxd](https://github.com/lyledean1/zigxd), an implementation of the classic xxd utility, to learn Zig. For those unfamiliar, xxd is a command-line tool that creates hexadecimal dumps of files or standard input, making it invaluable for viewing binary files, debugging, and reverse engineering. 
