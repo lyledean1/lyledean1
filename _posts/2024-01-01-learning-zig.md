@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Learning Zig by Building zigxd"
+date: 2024-01-01
 ---
 # Learning Zig by Building zigxd
 
