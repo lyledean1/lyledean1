@@ -2,6 +2,7 @@ theme: minima
 plugins:
 - jekyll-remote-theme
 - jekyll-feed
+- jekyll-seo-tag
 
 title: Lyle Dean
 description: "Lead Engineer. Interested in compilers and languages."
