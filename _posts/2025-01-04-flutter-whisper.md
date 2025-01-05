@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Flutter Whisper.cpp"
+date: 2024-01-04
 ---
 # Flutter Whisper.cpp
 
