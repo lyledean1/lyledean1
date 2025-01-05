@@ -4,15 +4,15 @@
 
 <p>Hi, I'm Lyle, a Lead Engineer at loveholidays. Interested in compilers and languages.</p>
 
-<h3>Blogs</h3>
+<h3>Blog</h3>
 <ul class="blog-list">
   <li>
-    <a href="/blog/cyclang.md">Cyclang - Building a Compiler with Rust and LLVM</a>
+    <a href="/_post/cyclang.md">Cyclang - Building a Compiler with Rust and LLVM</a>
   </li>
   <li>
-    <a href="/blog/zig.md">Learning Zig by Building zigxd</a>
+    <a href="/_post/zig.md">Learning Zig by Building zigxd</a>
   </li>
   <li>
-    <a href="/blog/flutter_whisper.md">Flutter Whisper.cpp - Open Source & Conference Talk</a>
+    <a href="/_post/flutter_whisper.md">Flutter Whisper.cpp - Open Source & Conference Talk</a>
   </li>
 </ul>
