@@ -4,8 +4,6 @@ title:  "Opensourcing a Strava MCP Server"
 date: 2025-07-20
 ---
 
-# Opensourcing a Strava MCP Server
-
 I've built a Strava MCP Server in Go that integrates with Claude Desktop, allowing me to access my personal fitness data directly through conversations. The server is open-sourced for others who want similar functionality. By connecting to my Strava data, Claude can now provide personalized training insights, performance analysis, and tailored recommendations based on my actual workout history.
 
 [https://github.com/lyledean1/strava-mcp](https://github.com/lyledean1/strava-mcp)
