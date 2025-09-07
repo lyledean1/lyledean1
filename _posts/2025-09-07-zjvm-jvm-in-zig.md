@@ -43,17 +43,20 @@ I've been learning Zig over the past year, and as someone who uses Rust quite fr
 
 ## Architecture
 
-Firstly, the simple implementation loads all the classes provided in the folder i.e 
+The implementation starts by loading all classes from the provided folder:
+
 ```bash
 zig build run -- example/src/main/java/basic Fibonacci
 ```
-This command will load all .Class files in the "basic" folder, then Execute the Fibonacci "main" method. The first step is illustrated below.
+
+This command loads all .class files in the "basic" folder, then executes the "main" method of the Fibonacci class. The first step is illustrated below. See the code [here](https://github.com/lyledean1/zjvm/blob/8b203b6bcc5300aa1496c9c78f96c0c22155d484/src/main.zig#L45)
 
 <img width="338" height="524" alt="Screenshot 2025-09-07 at 16 14 20" src="https://github.com/user-attachments/assets/b7cd9309-08d0-40c2-8c73-611e921768d7" />
 
-Then the Classes are stored in the Klass Repo, which is used in the VM loop to find Classes when invokestatic, invokevirtual, invokespecial bytecodes are provided. It looks up the Class + Method to execute depending whether its static or not. If it is static then an Object is created in the Heap which has the instance fields related to that instance of that class (after the new instruction is executed). There is no Garbage Collector for the heap at the time of writing - which will be another feature I will be implementing. 
+The classes are then stored in the Klass Repo, which the VM loop uses to find classes when executing invokestatic, invokevirtual, or invokespecial bytecodes. It looks up the appropriate class and method based on whether the call is static or instance-based. For instance methods, an object is created in the heap containing the instance fields for that class (this happens after the new instruction executes). Currently there's no garbage collector for the heap - that's another feature I plan to implement. The VM execute code is [here](https://github.com/lyledean1/zjvm/blob/8b203b6bcc5300aa1496c9c78f96c0c22155d484/src/runtime/vm.zig#L20)
 
 <img width="699" height="599" alt="Screenshot 2025-09-07 at 16 18 23" src="https://github.com/user-attachments/assets/7517e94e-7efc-4411-a951-2c4b925e20c6" />
+
 
 
 ## Inspiration 
