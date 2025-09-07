@@ -43,9 +43,21 @@ I've been learning Zig over the past year, and as someone who uses Rust quite fr
 
 ## Architecture
 
+Firstly, the simple implementation loads all the classes provided in the folder i.e 
+```bash
+zig build run -- example/src/main/java/basic Fibonacci
+```
+This command will load all .Class files in the "basic" folder, then Execute the Fibonacci "main" method. The first step is illustrated below.
+
+<img width="338" height="524" alt="Screenshot 2025-09-07 at 16 14 20" src="https://github.com/user-attachments/assets/b7cd9309-08d0-40c2-8c73-611e921768d7" />
+
+Then the Classes are stored in the Klass Repo, which is used in the VM loop to find Classes when invokestatic, invokevirtual, invokespecial bytecodes are provided. It looks up the Class + Method to execute depending whether its static or not. If it is static then an Object is created in the Heap which has the instance fields related to that instance of that class (after the new instruction is executed). There is no Garbage Collector for the heap at the time of writing - which will be another feature I will be implementing. 
+
+<img width="699" height="599" alt="Screenshot 2025-09-07 at 16 18 23" src="https://github.com/user-attachments/assets/7517e94e-7efc-4411-a951-2c4b925e20c6" />
+
 
 ## Inspiration 
 
-I found these resources about other toy JVM implementations in Java and Rust incredibly helpful, and I highly recommend checking them out:
+I found these resources about other toy JVM implementations in Java and Rust incredibly helpful and inspiring, and I highly recommend checking them out:
 - [I have written a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
 - [Implementing a Simple JVM in Java and Rust by Ben Evans](https://www.youtube.com/watch?v=KVxloQHRYvU&t=9s)
