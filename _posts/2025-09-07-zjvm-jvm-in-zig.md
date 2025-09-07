@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Zjvm: Building a JVM in Zig"
-date: 2025-07-20
+title:  "zjvm: Building a JVM in Zig"
+date: 2025-09-07
 ---
 
 I've built a toy [JVM in Zig](https://github.com/lyledean1/zjvm) as a way to dive deeper into understanding how the JVM works under the hood. Currently it supports a number of core features:
