@@ -53,9 +53,10 @@ This command loads all .class files in the "basic" folder, then executes the "ma
 
 <img width="338" height="524" alt="Screenshot 2025-09-07 at 16 14 20" src="https://github.com/user-attachments/assets/b7cd9309-08d0-40c2-8c73-611e921768d7" />
 
-The classes are then stored in the Klass Repo, which the VM loop uses to find classes when executing invokestatic, invokevirtual, or invokespecial bytecodes. It looks up the appropriate class and method based on whether the call is static or instance-based. For instance methods, an object is created in the heap containing the instance fields for that class (this happens after the new instruction executes). Currently there's no garbage collector for the heap - that's another feature I plan to implement. The VM execute code is [here](https://github.com/lyledean1/zjvm/blob/8b203b6bcc5300aa1496c9c78f96c0c22155d484/src/runtime/vm.zig#L20)
+The classes are then stored in the Klass Repo, which the VM loop uses to find classes when executing invokestatic, invokevirtual, or invokespecial bytecodes. It looks up the appropriate class and method based on whether the call is static or instance-based. For instance methods, an object is created in the heap containing the instance fields for that class (this happens after the new instruction executes). Currently there's no garbage collector for the heap - that's another feature I plan to implement. The VM execute method is [here](https://github.com/lyledean1/zjvm/blob/8b203b6bcc5300aa1496c9c78f96c0c22155d484/src/runtime/vm.zig#L20)
 
-<img width="699" height="599" alt="Screenshot 2025-09-07 at 16 18 23" src="https://github.com/user-attachments/assets/7517e94e-7efc-4411-a951-2c4b925e20c6" />
+<img width="638" height="600" alt="Screenshot 2025-09-07 at 16 40 27" src="https://github.com/user-attachments/assets/66785e9f-945f-4713-b1a3-afb096825911" />
+
 
 
 
