@@ -4,7 +4,7 @@ title:  "Compass: Preferences for LLM-Assisted Coding"
 date: 2026-01-02
 ---
 
-I spent the holiday break pulling together a tool I've wanted for a while: **Compass**. Large language models can crank out code in seconds, but coaching them into _my_ style takes way more prompting than I like. Compass gives me a declarative way to describe those preferences and enforce them automatically.
+I spent the holiday break pulling together a tool I've wanted for a while: [**Compass**](https://github.com/lyledean1/compass). Large language models can crank out code in seconds, but coaching them into _my_ style takes way more prompting than I like. Compass gives me a declarative way to describe those preferences and enforce them automatically.
 
 ## Why build Compass?
 
