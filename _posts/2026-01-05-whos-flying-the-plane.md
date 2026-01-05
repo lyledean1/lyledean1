@@ -8,7 +8,7 @@ We used to fly with a yoke and rudder pedals. Every line of code was a deliberat
 
 Now? Now we're drifting.
 
-I've been using ChatGPT and other models since they first came out—asking questions, debugging errors, generating snippets. But 2025 changed everything. AI went from being a helpful reference to an active participant in the development loop. Tools like Claude Code and Cursor don't just answer questions; they read your files, run your tests, edit your code, and maintain context across hours-long sessions.
+I've been using ChatGPT and other models since they first came out—asking questions, debugging errors, generating snippets. But 2025 changed everything. AI went from being a helpful reference to an active participant in the development loop. Tools like Claude Code and Codex don't just answer questions; they read your files, run your tests, edit your code, and maintain context across hours-long sessions.
 
 ## The New Cockpit
 
