@@ -32,7 +32,7 @@ This is the drift. And if you overcorrect—if you keep yanking the controls wit
 
 This is where the analogy gets powerful: your tools are your instruments, and they're what keep you from flying blind.
 
-A pilot without instruments is helpless in clouds. They can't tell if they're climbing or diving, turning or flying straight. Spatial disorientation is real, and it's killed experienced pilots who stopped trusting their instruments.
+A pilot without instruments is helpless in clouds. They can't tell if they're climbing or diving, turning or flying straight. Spatial disorientation is real, and it's what happens when you stop trusting your instruments.
 
 When you're coding with AI, you need instruments:
 
