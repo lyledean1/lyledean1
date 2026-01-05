@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Who's Flying the Plane? The Truth About Coding with AI"
+title:  "Who's Flying the Plane? Coding with AI"
 date: 2026-01-05
 ---
 
