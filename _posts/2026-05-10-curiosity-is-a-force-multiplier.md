@@ -4,9 +4,9 @@ title:  "Curiosity Is a Force Multiplier"
 date: 2026-05-10
 ---
 
-AI is a force multiplier.
+AI is making execution cheaper.
 
-Most of us can feel that now.
+Which means judgment matters more.
 
 Things that used to take days can take hours. Things that used to take hours can take minutes.
 
@@ -16,7 +16,7 @@ But curiosity is a force multiplier too.
 
 And that matters more than ever.
 
-Because when intelligence is cheap and available, the advantage shifts to judgment.
+Because when raw execution becomes cheap and available, the advantage shifts to judgment.
 
 Not just the ability to make something, but to know what to leverage to ship better products.
 
@@ -31,6 +31,8 @@ That sounds like it should reduce the value of your own knowledge.
 It increases the value of knowing what tool you are looking at, when to use it, and what kind of problem it is actually for.
 
 That is what breadth gives you.
+
+It helps you recognize constraints, see tradeoffs earlier, and pattern match across domains.
 
 You stop seeing just one way to solve a problem.
 
@@ -52,9 +54,7 @@ Once you have spent time there, code stops feeling quite so abstract.
 
 You start seeing the layers underneath it.
 
-Building a JVM did something similar from another angle.
-
-It gave me a much better appreciation of how the JVM works underneath Java day to day.
+Building a JVM gave me a better appreciation of how the JVM works underneath Java day to day.
 
 And that kind of understanding starts to pay off at work.
 
