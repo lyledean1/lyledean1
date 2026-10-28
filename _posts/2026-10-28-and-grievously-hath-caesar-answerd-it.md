@@ -170,6 +170,8 @@ It's something I find throughout his work. Another scene that has always stayed 
 
 There's something devastatingly human about that line. No grand speech, no elaborate metaphor. Just the disbelief and accusation of a dying man, directed at the very friend who was trying to protect him. Romeo's good intentions have led to tragedy, and Shakespeare captures that terrible irony in a single sentence. (Slow Shakespeare has [a lovely piece on this moment](https://www.english.cam.ac.uk/research/slow-shakespeare/2018/05/28/i-thought-all-for-the-best-3-1-87-95/) too.)
 
+I remember first seeing [this scene from Baz Luhrmann's *Romeo + Juliet*](https://www.youtube.com/watch?v=hvXIWelPEL0) at school and being shocked at how good it was. Harold Perrineau is brilliant as Mercutio, and DiCaprio does a great job too.
+
 And inevitably, as is the tragedy of *Romeo and Juliet*, Romeo, who moments before had refused to fight, is consumed by fire and fury. He turns on Tybalt:
 
 > "Either thou, or I, or both, must go with him."
