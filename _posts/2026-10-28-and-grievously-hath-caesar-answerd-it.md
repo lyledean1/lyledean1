@@ -6,7 +6,9 @@ date: 2026-10-28
 
 I've been catching up on my reading recently, and picked up Shakespeare's *Julius Caesar* (as you do). I've always been struck by Mark Antony's famous "Friends, Romans, countrymen" speech. Every time I hear or read it, I'm overcome by an emotion I can't quite put into words. It's a rare thing to find a piece of literature that can move you so deeply, no matter how many times you've encountered it.
 
-I'm also trying to get better at writing, and I thought there'd be no better way to practise than by exploring something written so well.
+I'm also trying to get better at writing, and I thought there'd be no better way to practise than by exploring something written so well. Writing this, I realised just how much I enjoy Shakespeare.
+
+There's plenty more on my list. I've tried others, like *Henry V* and *Macbeth*, but they never quite stuck. When you find the one that does, though, it really sticks.
 
 My first encounter with the speech was through [this extraordinary performance by Damian Lewis](https://www.youtube.com/watch?v=q89MLuLSJgk). I remember sitting in my flat during COVID, watching this one clip, completely captivated. His delivery, the words themselves, and the emotion behind them have stayed with me ever since.
 
