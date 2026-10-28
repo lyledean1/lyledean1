@@ -150,6 +150,8 @@ The crowd, previously sympathetic to Brutus, begins to question the assassinatio
 
 It's a masterful demonstration of the power of rhetoric, but also of the emotion Shakespeare manages to capture. Sometimes the most powerful thing an orator can do is stop speaking.
 
+Perhaps that's why HBO's [*Rome*](https://www.imdb.com/title/tt0384766/) didn't even attempt to portray the speech. The series is sometimes criticised for it, but I don't blame them. How do you compete with Shakespeare?
+
 ---
 
 ### A little history, a little Shakespeare
