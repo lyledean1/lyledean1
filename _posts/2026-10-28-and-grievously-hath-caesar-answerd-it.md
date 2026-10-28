@@ -22,12 +22,12 @@ In Shakespeare's telling, Caesar's final moments are immortalised by one of the 
 
 *You too, Brutus?*
 
+There's something heartbreaking about the simplicity of it. Surrounded by enemies, it's the betrayal of a friend that finally breaks him.
+
 ![The Death of Julius Caesar by Vincenzo Camuccini](/assets/images/camuccini-death-of-caesar.jpg)
 *[The Death of Julius Caesar](https://en.wikipedia.org/wiki/The_Death_of_Julius_Caesar_(Camuccini)), Vincenzo Camuccini*
 
-(I think most of us have seen this one in meme form, which is great too.)
-
-There's something heartbreaking about the simplicity of it. Surrounded by enemies, it's the betrayal of a friend that finally breaks him.
+I think most of us have seen this one in meme form, which is great too. But even after all the memes, I still find it a striking painting. That says a lot about Camuccini's skill, and about how powerfully Shakespeare's telling of the moment has endured.
 
 And yet the conspirators got the opposite of what they wanted. Caesar's assassination would help bring about the very thing they feared: the end of the Republic and the eventual rise of the Roman Empire.
 
