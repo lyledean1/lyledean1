@@ -156,6 +156,8 @@ It's a masterful demonstration of the power of rhetoric, but also of the emotion
 
 Perhaps that's why HBO's [*Rome*](https://www.imdb.com/title/tt0384766/) didn't even attempt to portray the speech. The series is sometimes criticised for it, but I don't blame them. How do you compete with Shakespeare?
 
+That said, *Rome*'s own Mark Antony, played by James Purefoy, is brilliant in his own right. ["Good news, bad news, eh?"](https://www.youtube.com/watch?v=sOnEcQGZhcI) is one of my favourite moments in the series.
+
 ---
 
 ### A little history, a little Shakespeare
@@ -192,3 +194,7 @@ If you love history as much as I do, I can't recommend [Historia Civilis](https:
 
 *"My heart is in the coffin there with Caesar,<br>
 And I must pause till it come back to me."*
+
+---
+
+*Update: in hindsight, this post must have done something right. When I shared it on r/shakespeare, it was third on the subreddit for the day.*
